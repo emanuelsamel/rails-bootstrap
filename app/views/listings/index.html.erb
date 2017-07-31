@@ -1,0 +1,17 @@
+<div class="listings_index">
+  <h1>All listings</h1>
+  <%= link_to 'New Listing', new_listing_path %>
+  <div class="listings_container">
+    <% @listings.each do |listing| %>
+      <div class="listing">
+        <h3><%= link_to listing.name, listing %></h3>
+        <p><%= image_tag listing.image.url(:medium) %></p>
+        Location: <%= listing.address %><br>
+        Description: <%= listing.description %><br>
+        Price: $<%= listing.price %><br>
+        Rating: <%= listing.reviews.average(:rating).to_i %><br>
+        Available Time: <%= listing.human_time_start %> - <%= listing.human_time_end %>
+      </div>
+    <% end %>
+  </div>
+</div>

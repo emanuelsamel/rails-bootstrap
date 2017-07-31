@@ -1,0 +1,15 @@
+<div class="search_results">
+
+    <% @listings.each do |listing| %>
+      <h3><%= listing.name %></h3>
+      <p><%= listing.address %></p>
+      <p>$<%= listing.price %></p>
+      <p>From: <%= listing.human_time_start %> - <%= listing.human_time_end %></p>
+        <% if current_user.bookings.find_by(listing_id: listing.id) %>
+          <p>Booked <%= current_user.bookings.find_by(listing_id: listing.id).human_time %></p>
+        <% else %>
+          <%= link_to "Book Now", new_listing_booking_path(listing) %>
+        <% end %>
+    <% end %>
+</div>
+<div id="map"></div>

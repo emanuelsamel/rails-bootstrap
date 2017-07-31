@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
 
   before_action :show_flash
 
+  helper_method :current_user
+
+
+  def current_user
+    session[:user_id] && User.find(session[:user_id])
+  end
   private
 
   def show_flash

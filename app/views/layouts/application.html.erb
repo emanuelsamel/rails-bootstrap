@@ -1,20 +1,135 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
-</html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxfwQJn9-quCut5Srf4IA8Zt78ZFlc6aU&callback=initMap">
+  </script>
+</head>
+<body class="<%= params[:controller] %> <%= params[:action] %>">
+  <header class="header">
+    <%= render 'layouts/navigation' %>
+    <%= link_to "<span class='parkingsize'>p a r <span class='kingweight'>K i n g</span></span>".html_safe, root_url %>
+
+    <% if current_user %>
+
+    <div class="topnav div">
+      <nav class="topnav">
+        <p class="homepage_avatar"><%= link_to "Hi #{current_user.first_name}!", user_path(current_user.id), id: 'profile-link' %></p>
+        <ul class="topnav links">
+          <li class="sub-menu-parent">
+            <div class="side-bar">
+              <a id="dashboard">
+                <%=fa_icon "navicon"%>
+              </a>
+            </div>
+
+
+            <ul class="sub-menu">
+
+              <li id= "drop"><%= link_to "Profile", user_path(current_user.id)%></li>
+              <li id= "drop"><%= link_to "Mailbox", conversations_path %></li>
+              <li id= "drop"><%= link_to "Logout", sessions_path, method: :delete %></li>
+              <li id= "drop"><%= link_to 'Listings', user_listings_path %></li>
+              <li id= "drop"><%= link_to 'Bookings', user_bookings_path %></li>
+
+            </ul>
+          </li>
+
+
+          <% else %>
+          <div class="topnav div">
+            <nav class="topnav">
+              <ul class="topnav links">
+                <li class="sub-menu-parent">
+                  <div class="side-bar">
+                    <a id="dashboard">
+                      <%=fa_icon "navicon"%>
+                    </a>
+                  </div>
+
+
+                  <ul class="sub-menu">
+
+                    <li id= "drop"><a href="#" class="login_link">Login</a></li>
+                    <li id= "drop"><a href="#" class="new_user_link">Register</a></li>
+                    <li id= "drop"><%= link_to "About", "/about" %></li>
+
+                  </ul>
+                </li>
+                <% end %>
+
+              </nav>
+            </div>
+          </header>
+          <main class="container">
+            <!-- <main role= "main"> -->
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+            <div class="login">
+              <%= form_for :sessions, url: sessions_path do |f| %>
+              <button type="button" class="close">x</button>
+              <div class='field'>
+                <%= f.label :email %><br>
+                <%= f.email_field :email %>
+              </div>
+
+              <div class='field'>
+                <%= f.label :password %><br>
+                <%= f.password_field :password %>
+              </div>
+              <div class="register_link">
+                <a href="#" class="new_user_link">Register</a>
+              </div>
+              <%= f.submit 'Login' %>
+              <% end %>
+            </div>
+
+            <div class="new_user">
+              <%= form_for User.new do |f| %>
+              <button type="button" class="close">x</button>
+              <div class="field">
+                <%= f.label :first_name %><br>
+                <%= f.text_field :first_name %>
+              </div>
+
+              <div class="field">
+                <%= f.label :last_name %><br>
+                <%= f.text_field :last_name %>
+              </div>
+
+              <div class='field'>
+                <%= f.label :email %><br>
+                <%= f.email_field :email %>
+              </div>
+
+
+              <div class='field'>
+                <%= f.label :password %><br>
+                <%= f.password_field :password %>
+              </div>
+
+              <div class='field'>
+                <%= f.label :password_confirmation %><br>
+                <%= f.password_field :password_confirmation %>
+              </div>
+
+              <%= f.submit 'Sign Up' %>
+
+              <% end %>
+            </div>
+
+
+
+          </main>
+
+        </body>
+        </html>

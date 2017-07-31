@@ -1,0 +1,101 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.user_partial {
+  width: 100%;
+  margin-left: 2em;
+  .users.bookings,
+  .users.listings {
+    display: inline-block;
+    width: 85%;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgb(214, 214, 214);
+    border: 3px outset rgb(255, 255, 255);
+  }
+}
+.users.listings.off {
+  background-color: grey;
+  color: darkgrey;
+  a {
+    color: #6060ff;
+  }
+}
+.user_profile {
+  h1 {
+    color: black;
+  }
+  .profile_user_info {
+    h3,
+    p {
+    color: black;
+    }
+  }
+}
+.users.show,
+.users.user_listings,
+.users.user_bookings {
+  // background-image: url("https://forged.rpmware.com/storage/hero1.jpg");
+  // background-image: url("http://www.magic4walls.com/wp-content/uploads/2016/05/white-ford-mustang-2015-aristo-collection-Golden-Gate-Bridge-night.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-color: rgb(37, 37, 37);
+  margin-top: 7em;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  input {
+    display: none;
+  }
+}
+.listings.listing_search_form {
+  background-image: url("https://images5.alphacoders.com/343/343728.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input:checked + .slider {
+  background-color: #005496;
+  &:before {
+    transform: translateX(18px);
+  }
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #005496;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #9d9d9d;
+  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+  }
+}
+.slider.round {
+  border-radius: 34px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+.messages.index {
+  margin-top: 7em;
+}
+.listings.new {
+  margin-top: 9em;
+}
