@@ -1,269 +1,269 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-
-.pages.show {
-  p,
-  h1,
-  h3,
-  h4,
-  .listing {
-    text-decoration: none;
-    color: white;
-  }
-  .aboutcrown {
-    text-align: center;
-  }
-}
-
-
-header {
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 26px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  h1 {
-    height: 100%;
-    line-height: 50px;
-    font: {
-      size: 21px;
-      weight: bold;
-    }
-    // background-image: url('crown-512-pink.png');
-    background-size: 17px;
-    background-repeat: no-repeat;
-    background-position: 42px 0px;
-    position: absolute;
-    top: -8px;
-    left: 10px;
-    text-decoration: underline;
-    text-decoration-color: white;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
-}
-.listings_index {
-  .listing {
-    display: inline-block;
-    width: 25%;
-    margin-left: 20px;
-  }
-}
-.container {
-  position: relative;
-  margin-top: 52px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.homepage_container {
-  height: 100%;
-  width: 100%;
-}
-// .search_listing {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   form {
-//     position: absolute;
-//     top: 20em;
-//     left: 42%;
+// body {
+//   margin: 0;
+//   font-family: sans-serif;
+// }
+//
+//
+// .pages.show {
+//   p,
+//   h1,
+//   h3,
+//   h4,
+//   .listing {
+//     text-decoration: none;
+//     color: white;
+//   }
+//   .aboutcrown {
+//     text-align: center;
 //   }
 // }
-.kingweight {
-  font-weight: 900;
-}
-
-.parkingsize {
-  font-size: 20px;
-}
-.home.index {
-  // background-image: url("https://forged.rpmware.com/storage/hero1.jpg");
-  background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-138208.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  .book,
-  .list {
-    text-align: center;
-    a {
-      border: 3px solid white;
-      padding: 5px;
-      padding-left: 25px;
-      padding-right: 25px;
-      width: 100px;
-      color: white;
-      text-decoration: none;
-      background-color: transparent;
-      transition: all 0.25s ease 0s;
-      font: {
-        weight: bold;
-        size: 18px;
-      }
-      &:hover {
-        border: 3px solid white;
-        background-color: white;
-        color: rgb(50, 50, 50);
-      }
-      // &:active {
-      //   border-top: 3px solid rgb(255, 0, 138);
-      //   border-right: 3px solid rgb(255, 0, 138);
-      //   color: rgb(255, 0, 138);
-      //   border-bottom: 3px solid white;
-      //   border-left: 3px solid white;
-      // }
-    }
-  }
-}
-.book,
-.list {
-  text-align: center;
-  a {
-    border: 3px solid white;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 150px;
-    color: white;
-    text-decoration: none;
-    background-color: transparent;
-    transition: all 0.25s ease 0s;
-    font: {
-      weight: bold;
-      size: 18px;
-    }
-    &:hover {
-      background-color: white;
-      color: black;
-
-    }
-  }
-}
-
-.book a {
-  position: absolute;
-  top: 300px;
-  left: 30%;
-}
-
-.list a {
-  position: absolute;
-  top: 300px;
-  left: 55%;
-}
-
-.topnav.div {
-  position: fixed;
-  top: 0;
-  right: 0;
-  .topnav.links {
-    color: white;
-    span {
-      color: white;
-    }
-    // .willhover {
-    //   &:hover + ul {
-    //     display: block;
-    //   }
-    // }
-    // .profile_link {
-    //   position: relative;
-    // }
-    // .profile_dashboard {
-    //   background-color: blue;
-    //   padding-left: 0;
-    //   position: absolute;
-    //   top: 36px;
-    //   left: 33px;
-    //   display: none;
-    //   li {
-    //     display: block;
-    //     }
-    //   }
-    li {
-      display: inline-block;
-      list-style-type: none;
-      a {
-        text-decoration: none;
-
-
-        font: {
-          weight: bold;
-          size: 17px;
-        }
-        &:active {
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-.new_user,
-.login {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(30,30,30,0.8);
-  z-index: 200;
-}
-
-.new_user > form,
-.login > form {
-  display: block;
-  width: 400px;
-  height: 24em;
-  padding: 2em;
-  background-color: white;
-  position: absolute;
-  margin: auto;
-  top: 13em;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: relative;
-}
-
-.new_user > form input {
-    display: block;
-    border: none;
-    outline: none;
-    padding: 0.5em;
-    width: 100%;
-    margin: 1em 0;
-    color: #555;
-}
-.close {
-    display: block;
-    border: none;
-    outline: none;
-    width: 1em;
-    height: 1em;
-    font: 1.5em Arial;
-    background-color: #bc2a39 ;
-    color: #e7c0b9 ;
-    border-radius: 0.5em;
-    line-height: 0;
-
-   position: absolute;
-    top: 0.25em;
-    right: 0.25em;
-}
-.register_link a.new_user_link {
-    position: absolute;
-    bottom: 5em;
-    right: 13em;
-}
+//
+//
+// header {
+//   margin: 0;
+//   background-color: rgba(0, 0, 0, 0.9);
+//   padding: 26px;
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+//   z-index: 100;
+//   h1 {
+//     height: 100%;
+//     line-height: 50px;
+//     font: {
+//       size: 21px;
+//       weight: bold;
+//     }
+//     // background-image: url('crown-512-pink.png');
+//     background-size: 17px;
+//     background-repeat: no-repeat;
+//     background-position: 42px 0px;
+//     position: absolute;
+//     top: -8px;
+//     left: 10px;
+//     text-decoration: underline;
+//     text-decoration-color: white;
+//   }
+//   a {
+//     text-decoration: none;
+//     color: white;
+//   }
+// }
+// .listings_index {
+//   .listing {
+//     display: inline-block;
+//     width: 25%;
+//     margin-left: 20px;
+//   }
+// }
+// .container {
+//   position: relative;
+//   margin-top: 52px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 100%;
+// }
+//
+// .homepage_container {
+//   height: 100%;
+//   width: 100%;
+// }
+// // .search_listing {
+// //   position: relative;
+// //   width: 100%;
+// //   height: 100%;
+// //   form {
+// //     position: absolute;
+// //     top: 20em;
+// //     left: 42%;
+// //   }
+// // }
+// .kingweight {
+//   font-weight: 900;
+// }
+//
+// .parkingsize {
+//   font-size: 20px;
+// }
+// .home.index {
+//   // background-image: url("https://forged.rpmware.com/storage/hero1.jpg");
+//   background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-138208.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   .book,
+//   .list {
+//     text-align: center;
+//     a {
+//       border: 3px solid white;
+//       padding: 5px;
+//       padding-left: 25px;
+//       padding-right: 25px;
+//       width: 100px;
+//       color: white;
+//       text-decoration: none;
+//       background-color: transparent;
+//       transition: all 0.25s ease 0s;
+//       font: {
+//         weight: bold;
+//         size: 18px;
+//       }
+//       &:hover {
+//         border: 3px solid white;
+//         background-color: white;
+//         color: rgb(50, 50, 50);
+//       }
+//       // &:active {
+//       //   border-top: 3px solid rgb(255, 0, 138);
+//       //   border-right: 3px solid rgb(255, 0, 138);
+//       //   color: rgb(255, 0, 138);
+//       //   border-bottom: 3px solid white;
+//       //   border-left: 3px solid white;
+//       // }
+//     }
+//   }
+// }
+// .book,
+// .list {
+//   text-align: center;
+//   a {
+//     border: 3px solid white;
+//     padding: 5px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     width: 150px;
+//     color: white;
+//     text-decoration: none;
+//     background-color: transparent;
+//     transition: all 0.25s ease 0s;
+//     font: {
+//       weight: bold;
+//       size: 18px;
+//     }
+//     &:hover {
+//       background-color: white;
+//       color: black;
+//
+//     }
+//   }
+// }
+//
+// .book a {
+//   position: absolute;
+//   top: 300px;
+//   left: 30%;
+// }
+//
+// .list a {
+//   position: absolute;
+//   top: 300px;
+//   left: 55%;
+// }
+//
+// .topnav.div {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   .topnav.links {
+//     color: white;
+//     span {
+//       color: white;
+//     }
+//     // .willhover {
+//     //   &:hover + ul {
+//     //     display: block;
+//     //   }
+//     // }
+//     // .profile_link {
+//     //   position: relative;
+//     // }
+//     // .profile_dashboard {
+//     //   background-color: blue;
+//     //   padding-left: 0;
+//     //   position: absolute;
+//     //   top: 36px;
+//     //   left: 33px;
+//     //   display: none;
+//     //   li {
+//     //     display: block;
+//     //     }
+//     //   }
+//     li {
+//       display: inline-block;
+//       list-style-type: none;
+//       a {
+//         text-decoration: none;
+//
+//
+//         font: {
+//           weight: bold;
+//           size: 17px;
+//         }
+//         &:active {
+//           color: white;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// .new_user,
+// .login {
+//   display: none;
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   height: 100%;
+//   width: 100%;
+//   background-color: rgba(30,30,30,0.8);
+//   z-index: 200;
+// }
+//
+// .new_user > form,
+// .login > form {
+//   display: block;
+//   width: 400px;
+//   height: 24em;
+//   padding: 2em;
+//   background-color: white;
+//   position: absolute;
+//   margin: auto;
+//   top: 13em;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   position: relative;
+// }
+//
+// .new_user > form input {
+//     display: block;
+//     border: none;
+//     outline: none;
+//     padding: 0.5em;
+//     width: 100%;
+//     margin: 1em 0;
+//     color: #555;
+// }
+// .close {
+//     display: block;
+//     border: none;
+//     outline: none;
+//     width: 1em;
+//     height: 1em;
+//     font: 1.5em Arial;
+//     background-color: #bc2a39 ;
+//     color: #e7c0b9 ;
+//     border-radius: 0.5em;
+//     line-height: 0;
+//
+//    position: absolute;
+//     top: 0.25em;
+//     right: 0.25em;
+// }
+// .register_link a.new_user_link {
+//     position: absolute;
+//     bottom: 5em;
+//     right: 13em;
+// }

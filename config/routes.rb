@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'home#index'
+  root 'home#show'
+  get 'home_index' => 'home#index'
   get 'edit_user_form' => 'users#edit_user_form'
   get 'listing_search_form' => 'listings#listing_search_form'
   get 'listing_search' => 'listings#search'

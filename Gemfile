@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
 end
 ruby '2.4.1'
 gem 'rails', '~> 5.1.2'
-gem 'sqlite3'
+gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -49,3 +49,7 @@ end
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'awesome_print'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
